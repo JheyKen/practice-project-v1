@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controller\HomeController;
+use App\Http\Controller\AboutContoller;
+use App\Http\Controller\ProductsController;
+use App\Http\Controller\StoreController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +20,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+Route::get('/home', function () {
+    return view('index');
+});
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/products', function () {
+    return view('products');
+});
+Route::get('/store', function () {
+    return view('store');
 });
