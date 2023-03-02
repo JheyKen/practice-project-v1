@@ -19,16 +19,11 @@ use App\Http\Controllers\StoreController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/home', function () {
     return view('index');
 });
 Route::get('/about',[AboutController::class, 'index'])->name('about.index');
 
-Route::get('/products', function () {
-    return view('products');
-});
+Route::get('/products',[ProductsController::class, 'index'])->name('product.index');
 Route::get('/store', function () {
     return view('store');
 });
