@@ -9,7 +9,7 @@ class AboutController
 {
     //
     public function index(){
-        return view('About',
+        return view('main.About',
     [
         'About' => About::all()
     ]);
